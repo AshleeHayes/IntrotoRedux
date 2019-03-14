@@ -29,8 +29,8 @@ class ConnectedForm extends Component {
     event.preventDefault();
     const { title } = this.state;
     const id = uuidv1();
-    this.props.addArticle({ title, id });           // Relevant Redux part!!
-    this.setState({ title: "" });
+     
+    this.props.addArticle({ title, id });
   }
 
   render() {
@@ -56,7 +56,7 @@ class ConnectedForm extends Component {
 }
 
 const Form = connect(
-  null,
+null,
   mapDispatchToProps
 )(ConnectedForm);
 
